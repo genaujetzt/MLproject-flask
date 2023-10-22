@@ -4,7 +4,7 @@ import sklearn
 import xgboost
 import pickle
 app = Flask(__name__)
-loaded_model = pickle.load(open('my_model.pickle', "rb"))
+loaded_model = pickle.load(open('TreeRegressor.pickle', "rb"))
 loaded_scaler = pickle.load(open("my_scaler.pickle", "rb"))
 @app.route('/', methods = ["GET", "POST"])
 def predict():
@@ -20,3 +20,4 @@ def predict():
         print(pred)
         message = f"Width will be around {pred[0][0]} and Depth will be around {pred[0][1]}"
     return render_template('index.html', message = message)
+app.run()
