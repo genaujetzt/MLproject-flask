@@ -1,0 +1,7 @@
+Flask
+gunicorn
+numpy
+pickle-mixin
+scikit-learn
+scipy
+
