@@ -20,4 +20,3 @@ def predict():
         print(pred)
         message = f"Width will be around {pred[0][0]} and Depth will be around {pred[0][1]}"
     return render_template('index.html', message = message)
-app.run()
