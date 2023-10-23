@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    p {
+    text-align:center
+    }
+    </style>
+    <style>
+    h1 {
+    text-align:center
+    }
+    </style>
 </head>
 <body>
-    <h1>Predictions for titanic</h1>
-    {%if message %}
-    <p>{{message}}</p>
-    {%endif %}
+    <h1>Predictions for Width and Depth of a Welding Joint</h1>
+
     <form action = "" method = "post">
         <p>
-            <label for = "IW">IW</label>
-            <input type = "text", name = "IW">
+            <img src="https://www.tdarsenal.ru/upload/medialibrary/9a7/9a7429f40f22609327fc03a1492d2c86.jpg" alt="WJ" width="259" height="194">
         </p>
+
+        <p>This model gives accurate predictions for: IW between 43 and 49, IF between 131 and 150, VW between 4.5 and 12, FP between 50 and 125</p>
+        <p>
+            <label for = "IW">IW</label>
+            <input type = "number" step="any" name = "IW" min = '0.01', max = '50'>
+        </p>
+
         <p>
             <label for = "IF">IF</label>
-            <input type = "text", name = "IF">
+            <input type = "number" step="any" name = "IF" min = '0.01', max = '160'>
         </p>
+
         <p>
             <label for = "VW">VW</label>
-            <input type = "text", name = "VW">
+            <input ttype = "number" step="any" name = "VW" min = '0.01', max = '15'>
         </p>
+
         <p>
             <label for = "FP">FP</label>
-            <input type = "text", name = "FP">
+            <input type = "number" step="any" name = "FP" min = '0.01', max = '140'>
         </p>
+
         <p>
             <input type = "submit">
         </p>
+
+        {%if message %}
+        <p style="font-size:160%;border: 2px solid Teal">{{message}}</p>
+        {%endif %}
+
+        <p>
+            <a href="https://github.com/genaujetzt/MLproject-flask">If you want to see the code press here</a>
+        </p>
+
     </form>
 </body>
 </html>
